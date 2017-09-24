@@ -1,0 +1,84 @@
+.registration {
+	&__wrap {
+		padding: 80px 0;
+	}
+	
+	&-block {
+		margin: 0 auto;
+		position: relative;
+		background-color: rgba(51, 51, 102, 0.5);
+		padding: 35px 135px 20px;
+		width: 865px;
+		
+		&_bg-color {
+			background-color: rgba(51, 51, 102, 1);
+		}
+		
+		&__text {
+			color: #fff;
+			font-size: 25px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		&__input {
+			float: left;
+			color: #000;
+			padding: 4.5px 43px;
+			font-size: 20px;
+			border:0;
+			
+			::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: #ccc;
+			}
+			::-moz-placeholder { /* Firefox 19+ */
+			  color: #ccc;
+			}
+			:-ms-input-placeholder { /* IE 10+ */
+			  color: #ccc;
+			}
+			:-moz-placeholder { /* Firefox 18- */
+			  color: #ccc;
+			}
+			
+			&-block {
+				.clearfix;
+				margin-bottom: @sp/3;
+			}
+		}
+
+		&__btn {
+			float: right;
+			background-color: @blue;
+			height: 32px;
+			color: @purple;
+			font-size: 20px;
+		    width: 40%;
+		    text-align: center;
+		    padding: 5px 0px 0 0px;
+		}
+
+		&__link {
+			color: @blue;
+			font-size: 17px;
+			text-aligm: center;
+			width: 100%;
+		}
+
+		&__confirmation {
+			position: absolute;
+			bottom: -70px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: 480px;
+			background-color: rgba(255,255,255, 0.5);
+			text-align: center;
+			font-size: 20px;
+			color: @gray;
+			padding: 5px;
+			-webkit-border-radius: 50px;
+			        border-radius: 50px;
+		}
+	}
+}
+

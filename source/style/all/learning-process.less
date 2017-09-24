@@ -1,0 +1,47 @@
+.learning-process {
+	background-color: @purple;
+	
+	&__wrap {
+		padding: 50px 55px 20px;
+		color: #fff;
+	}
+
+	&__title {
+		font-size: 30px;
+		font-weight: normal;
+		margin: 0 0 35px 0;
+		text-align: center;
+	}
+
+	&__list {
+		margin-bottom: @sp;
+	}
+
+	&__elem {
+		position: relative;
+		font-size: 20px;
+		line-height: 1;
+		min-height: 60px;
+		margin-bottom: 25px;
+		
+		&-order {
+			position: absolute;
+			display: inline-block;
+			background-color: #fff;
+			width: 57px;
+			height: 57px;
+			text-align: center;
+			padding-top: 18px;
+			-webkit-border-radius: 50%;
+			        border-radius: 50%;
+			color: @purple;
+		}
+
+		&-text {
+			display: flex;
+			align-items: center;
+			min-height: 60px;
+			padding-left: 100px;
+		}
+	}
+}

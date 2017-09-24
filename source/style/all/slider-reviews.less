@@ -1,0 +1,92 @@
+.slider-reviews {
+	position: relative;
+		&__slide {
+
+			&-wrap {
+				background-color: #fff;
+				float: left;
+				width: 70%;
+				padding: @sp/3 10px;
+			}
+			
+			&-top,
+			&-middle,
+			&-bottom {
+				.clearfix;
+			}
+
+			&-top,
+			&-middle {
+				margin-bottom: @sp/3;
+			}
+		}
+
+		&__img {
+			float: left;
+			width: 140px;
+			height: 140px;
+			overflow: hidden;
+			border-radius: 50%;
+			-webkit-background-size: cover;
+			     -o-background-size: cover;
+			        background-size: cover;
+			background-position: center center;
+			margin-right: @sp*2;
+		}
+
+		&__text {
+			font-size: 14px;
+			line-height: 1.3;
+			height: 165px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+
+		&__name {
+			float: left;
+			color: #42648b;
+			font-size: 15px;
+			margin-right: 10px;
+			font-weight: bold;
+		}
+
+		&__date {
+			float: left;
+			font-size: 15px;
+			color: @gray;
+		}
+
+		&__edit,
+		&__close,
+		&__like {
+			float: right;
+			color: #bac7d6;
+			margin-left: @sp/3;
+		}
+
+		&__btn {
+			float: left;
+			color: #42648b;
+			font-size: 13px;
+		}
+
+	.slick-prev.slick-arrow {
+		display: none !important;
+	}
+
+
+	.slick-next.slick-arrow {
+		position: absolute;
+		right: 40px;
+		left: auto;
+		top: 47%;
+
+		
+		&:after {
+			content: "\F054";
+			font-size: 80px;
+		}
+
+
+	}
+}
