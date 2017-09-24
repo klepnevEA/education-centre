@@ -68,8 +68,6 @@ $(document).ready(function() {
 	// })
 
 	/*верхнее меню прячется*/
-
-
     var indicator = new WheelIndicator({
         callback: function(e){
         	if(e.direction == 'down') {
@@ -81,4 +79,19 @@ $(document).ready(function() {
         },
         preventMouse: false
     });
+
+
+    /*плавная прокрутка к блоку*/
+
+      $(document).ready(function(){
+	    $(".fixed-menu-anchor").on("click", function(e){
+	        var anchor = $(this);
+	        $('html, body').stop().animate({
+	            scrollTop: $(anchor.attr('href')).offset().top
+	        }, 777);
+	        $('.header').addClass('hidden');
+	        e.preventDefault();
+	        return false;
+	    });
+	});
 });
