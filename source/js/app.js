@@ -2,7 +2,10 @@
 
 $(document).ready(function() {
 
-	//слайдер верний
+	/*запускаем wowjs*/
+	new WOW().init();
+
+	//слайдер
 	$(".slider-main__wrap").slick({
 		dots: false,
 		arrows: true
@@ -89,9 +92,28 @@ $(document).ready(function() {
 	        $('html, body').stop().animate({
 	            scrollTop: $(anchor.attr('href')).offset().top
 	        }, 777);
-	        $('.header').addClass('hidden');
+	        console.log(anchor.attr('href'));
+	        
+	        if(anchor.attr('href') == "#home") {
+	        	$('.header').removeClass('hidden');
+	        } else {
+	        	$('.header').addClass('hidden');
+	        }
 	        e.preventDefault();
 	        return false;
 	    });
 	});
+
+    /*выпадающий дропдаун в верхнем меню*/
+
+    $('.header__elem').on('click' , function(e) {
+    	var that = $(this);
+		$('.header__dropdown').removeClass('active');
+    	that.find('.header__dropdown').addClass('active');
+    	e.stopPropagation();
+    })
+
+    $('body').on('click', function() {
+    	$('.header__dropdown').removeClass('active');
+    }) 
 });

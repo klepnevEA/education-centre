@@ -34,12 +34,42 @@ header.header
 							li.header__elem
 								a(href="#").header__link 
 									span Купить online курс
+
+								.header__dropdown 
+									.header__dropdown-wrap
+										.header__dropdown-text Станьте сертифицированным<br> тренером<br><span>Стоимость сейчас <span class="header__dropdown-through">12000руб.</span></span> 10000 руб.!
+										a(href="#").header__dropdown-btn Купить со скидкой
 							li.header__elem
 								a(href="#").header__link 
-									span Ваш учебный кабинет
+									span 
+										i.mdi.mdi-laptop-chromebook 
+										| Ваш учебный кабинет
+								.header__dropdown 
+									//- первый вариант дропдауна
+									.header__dropdown-wrap.header__dropdown-wrap_small
+										input.header__dropdown-input(type="text", placeholder="Ваш электронный адрес")
+										input.header__dropdown-input(type="text", placeholder="Ваш логин")
+										.header__dropdown-checkbox-block
+											input(type="checkbox").header__dropdown-checkbox#header__dropdown-checkbox
+											label(for="header__dropdown-checkbox") Оставаться в системе
+										a(href="#").header__dropdown-btn.header__dropdown-btn_blue Войти
+										.header__dropdown-text.header__dropdown-text_mb.header__dropdown-text_small Ещё не зарегистрированы?<br>
+											a(href="#") Пройдите регистрацию
+									//- второй вариант дропдауна
+									//- .header__dropdown-wrap.header__dropdown-wrap_small
+									//- 	a(href="#").header__dropdown-btn.header__dropdown-btn_blue Войти
+
 							li.header__elem
 								a(href="#").header__link 
-									span.header__urple-btn Заказать обратный<br> звонок
+									span.header__purple-btn Заказать обратный<br> звонок
+								.header__dropdown 
+									.header__dropdown-wrap.header__dropdown-wrap_small
+										input.header__dropdown-input(type="text", placeholder="Ваше имя")
+										input.header__dropdown-input(type="text", placeholder="+7(   )  -  -  ")
+										a(href="#").header__dropdown-btn.header__dropdown-btn_blue Отправить
+										.header__dropdown-text.header__dropdown-text_mb.header__dropdown-text_small
+											a(href="#") Отправляя свои персональные данные, Вы соглашаетесь на их обработку
+
 							li.header__elem
 								.header__contacts
 									a(href="tel:+7 495 82 55555").header__phone 8 800 10 10 200<br>
