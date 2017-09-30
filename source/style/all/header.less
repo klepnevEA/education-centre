@@ -170,7 +170,7 @@
 	&__nav {
 		float: right;
 		height: 77px;
-		width: calc(~'100% - 85px');
+		width: 100%;
 	}
 
 	&__list {
@@ -206,16 +206,6 @@
 			}
 			
 		}
-
-
-
-		i {
-			font-size: 30px;
-			margin-right: @sp/3;
-			position: relative;
-			top: 3px;
-			line-height: 0;
-		}
 	}
 
 	&__purple-btn {
@@ -250,6 +240,19 @@
 		height: 100%;
 		display: flex;
 		align-items: center;
+	}
+
+	&__eye {
+		display: inline-block;
+		background-image: url(../img/eye.png);
+		background-repeat: no-repeat;
+		width: 26px;
+		height: 26px;
+        background-size: 100%;
+		margin-right: @sp;
+		position: relative;
+		top: 5px;
+		line-height: 0;
 	}
 }
 

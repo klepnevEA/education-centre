@@ -26,3 +26,53 @@
 	}
 
 }
+
+@media (max-width: 1200px) {
+	.diploma {
+		&__img {
+			
+			
+			&-wrap {
+				.clearfix;
+				display: block;
+				width: 667px;
+				margin: 0 auto;
+			}
+		}
+
+		&__text {
+			float: left;
+			margin: 0 auto;
+			padding: 20px;
+			width: 100%;
+		}		
+	}	
+}
+
+
+@media (max-width: 990px) {
+	.diploma {
+
+		&__wrap {
+			padding: 55px 0px 50px 0px;
+		}
+
+		&__img {
+			float: none;
+			margin: 0 auto;
+			margin-bottom: @sp*2;
+			
+			&-wrap {
+				width: auto;
+			}
+		}
+
+		&__text {
+			float: none;
+			margin: 0 auto;
+			padding: 0px;
+			width: 298px;
+		}
+
+	}
+} 
