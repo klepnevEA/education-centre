@@ -1,16 +1,16 @@
-.what-you-get {
+.what-you-get-2 {
 	position: relative;
 	&__wrap {
-		background-color: rgba(153, 204, 255, 0.71);
+		background-color: @purple;
 		width: 100%;
 		padding: 50px 35px 40px;
 	}
 
 	&__title {
 		display: inline-block;
-		font-size: 30px;
+		font-size: 25px;
 		width: 100%;
-		color: @purple;
+		color: @blue;
 		text-align: center;
 		margin: 0 0 50px 0;
 		font-weight: normal;
@@ -44,14 +44,14 @@
 
 	&__text {
 		font-size: 20px;
-		color: @purple;
+		color: #fff;
 		line-height: 1;
 	}
 
 }
 
 @media (max-width: 990px) {
-	.what-you-get {
+	.what-you-get-2 {
 		&__list {
 			flex-direction: column;
 		}
@@ -59,7 +59,7 @@
 		&__elem {
 			margin: 0 auto;
 			flex-direction: row;
-			width: 70%;
+			width: 90%;
 		}
 
 		&__img {
@@ -70,12 +70,13 @@
 		&__text {
 			flex: 1 1 200px;
 			text-align: left;
+			font-size: 25px;
 		}
 	}
 } 
 
 @media (max-width: 735px) {
-	.what-you-get {
+	.what-you-get-2 {
 		&__elem {
 			margin: 0 auto;
 			flex-direction: row;
@@ -83,15 +84,20 @@
 		}
 
 		&__img {
-
+			flex: 0 1 100px;
 		}
 	}
 } 
 
 @media (max-width: 386px) {
-	.what-you-get {
+	.what-you-get-2 {
 		&__wrap {
-			padding: 50px 20px 40px;
+			padding: 30px 20px 40px;
+		}
+
+		&__title {
+			font-size: 16px;
+			margin: 0 0 20px 0;
 		}
 
 		&__text {

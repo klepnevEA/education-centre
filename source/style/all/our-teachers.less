@@ -1,0 +1,103 @@
+.our-teachers {
+	position: relative;
+	background-color: @blue;
+	&__wrap {
+		width: 100%;
+		padding: 30px;
+	}
+
+	&__slide {
+		padding: 0 10px;
+	}
+
+	&__title {
+		font-size: 30px;
+		color: @purple;
+		width: 100%;
+		text-align: center;
+	}
+
+	&__img {
+		margin: 0 auto;
+		background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+		width: 320px;
+		height: 320px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: @sp*2;
+	}
+
+	&__name {
+		display: inline-block;
+		font-size: 22px;
+		width: 100%;
+		color: @purple;
+		text-align: center;
+		margin: 0 0 50px 0;
+		font-weight: normal;
+	}
+
+	&__text {
+		font-size: 22px;
+		color: @gray;
+		line-height: 1;
+		max-height: 242px;
+		overflow-y: auto;
+	}
+
+	.slick-dots {
+		margin: 25px 0;
+		li {
+			padding: 0 @sp/3;
+
+			&:before {
+				background-color: #dfefff;
+			}
+
+			&:hover {
+				&:before {
+					background-color: #fff;
+				}
+			}
+
+			&.slick-active {
+				&:before {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width: 386px) {
+	.our-teachers {
+		&__wrap {
+			padding: 20px;
+		}
+
+		&__img {
+			width: 285px;
+			height: 285px;
+		}
+
+		&__text {
+			font-size: 17px;
+		}
+	}
+}
+
+@media (max-width: 321px) {
+	.our-teachers {
+		&__wrap {
+			padding: 0px;
+		}
+
+		&__img {
+			width: 250px;
+			height: 250px;
+		}
+	}
+}

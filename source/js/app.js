@@ -12,63 +12,58 @@ $(document).ready(function() {
 	});
 	
 
-
-	// //слайдер нижний
-	// $(".slider-bottom__wrap").slick({
-	// 	slidesToShow: 4,
-	// 	slidesToScroll: 4,
-	// 	dots: true,
-	// 	arrows: true,
-	// 	responsive: [
-	// 		{
-	// 		breakpoint: 1250,
-	// 			settings: {
-	// 				slidesToShow: 3,
-	// 				slidesToScroll: 3
-	// 			}
-	// 		},
-	// 		{
-	// 		breakpoint: 1050,
-	// 			settings: {
-	// 				slidesToShow: 2,
-	// 				slidesToScroll: 2
-	// 			}
-	// 		},
-	// 		{
-	// 		breakpoint: 767,
-	// 			settings: {
-	// 				slidesToShow: 1,
-	// 				slidesToScroll: 1
-	// 			}
-	// 		}
+	//слайдер
+	$(".slider-our-teachers").slick({
+		dots: true,
+		arrows: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		adaptiveHeight: true,
+		responsive: [
+			{
+			breakpoint: 1201,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+			breakpoint: 769,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
 			
-	// 	]
-	// });
+		]
+	});
 
 
-	//слайдер отзывво
+	//слайдер отзывов
 	$(".slider-reviews").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
 		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
 	});
 
 
 	/*кнопка верхнего меню*/
-	// $(window).resize(function(){
-	// 	if($( window ).width() > 1024 ) {
-	// 		$('.header').removeClass('open-menu');
-	// 	}
-	// });
+	$(window).resize(function(){
+		if($( window ).width() > 990 ) {
+			$('.header-mobile').removeClass('open-menu');
+		}
+	});
 
 
-	// $('.dropdown-menu__link').on('click', function(e) {
-	// 	e.preventDefault();
-	// 	if($( window ).width() <= 1024) {
-	// 		$('.header').toggleClass('open-menu');
-	// 	}
-	// })
+	$('.header-mobile__btn').on('click', function(e) {
+		e.preventDefault();
+		if($( window ).width() <= 990) {
+			$('.header-mobile').toggleClass('open-menu');
+		}
+	})
 
 	/*верхнее меню прячется*/
     var indicator = new WheelIndicator({
@@ -78,7 +73,6 @@ $(document).ready(function() {
         	} else if(e.direction == 'up') {
         		$('.header').removeClass('hidden');
         	}
-            console.log(e.direction);
         },
         preventMouse: false
     });
@@ -116,4 +110,8 @@ $(document).ready(function() {
     $('body').on('click', function() {
     	$('.header__dropdown').removeClass('active');
     }) 
+
+	/*маски для инпутов*/ 
+	$("#header__phone_number").mask("+7 (999) 999-99-99");
+	$("#header__phone_number-mobile").mask("+7 (999) 999-99-99");
 });

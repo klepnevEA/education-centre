@@ -9,18 +9,18 @@ function init () {
     myMap = new ymaps.Map('map', {
         // При инициализации карты обязательно нужно указать
         // её центр и коэффициент масштабирования.
-        center: [55.76, 37.64], // Москва
-        zoom: 9,
+        center: [51.535859, 46.035299], 
+        zoom: 17,
         controls: []
 
     });
 
     myMap.behaviors.disable('scrollZoom');
-    myMap.geoObjects.add(new ymaps.Placemark([55.6873856, 37.3730927], {
+    myMap.geoObjects.add(new ymaps.Placemark([51.535859, 46.035299], {
         balloonContent: 'Мы тут',
-        iconCaption: 'Сколково'
+        iconCaption: 'Образовательный центр'
     }, {
-         preset: 'islands#greenDotIconWithCaption'
+         preset: 'islands#blueDotIconWithCaption'
     }));
     myMap.controls.add(
         new ymaps.control.ZoomControl()

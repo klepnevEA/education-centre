@@ -47,7 +47,217 @@
 		font-size: 30px;
 		text-align: center;
 		margin-bottom: 20px;
-		line-height: 0.833;
+		line-height: 1;
 	}
 }
 
+@media (max-width: 1200px) {
+	.block-main {
+
+		&__info {
+			& .logo {
+				top: -200px;
+				width: 185px;
+			}
+		}
+
+	}
+} 
+
+@media (max-width: 1025px) {
+	.block-main {
+    	height: 700px;
+    	
+		&__text {
+			font-size: 23px;
+		}
+
+		&__info {
+			& .logo {
+				top: -177px;
+				width: 150px;
+			}
+		}
+
+	}
+} 
+
+@media (max-width: 990px) {
+	.block-main {
+
+		height: auto;
+
+		&__info {
+			position: relative;
+			margin-top: 57px;
+			bottom: auto;
+			left: 0;
+			top: 0;
+			width: 100%;
+			transform: translate(0, 0);
+			
+			& .logo {
+				display: block;
+				text-align: center;
+				position: static;
+				width: 100%;
+				height: auto;
+				padding: @sp*2 0; 
+				top: 0;
+				transform: translate(0, 0);
+				
+				
+				img {
+					display: inline-block;
+					width: 200px;
+					
+				}
+			}
+
+		}
+		&__text {
+			    background-color: rgba(51, 51, 102, 0.788);
+			    margin-bottom: 0;
+			    padding: 35px 35px 0px;
+			    
+
+		}
+	}
+} 
+
+@media (max-width: 769px) {
+	.block-main {
+    	
+		&__text {
+			font-size: 32px;
+			padding: 0px 35px 25px;
+		}
+
+		&__info {
+			.logo {
+				padding: 60px 0;
+				img {
+					width: 220px;
+				}
+			}
+		}
+
+	}
+} 
+
+@media (max-width: 415px) {
+	.block-main {
+		&__text {
+			font-size: 18px;
+			padding: 35px 15px 68px;
+		}
+
+		&__info {
+			margin-top: 20px;
+			
+			& .logo {
+				padding: 40px 0;
+				img {
+					width: 150px;
+				}
+			}
+		}
+
+		
+	}
+}
+
+
+@media (max-width: 386px) {
+	.block-main {
+		&__text {
+			font-size: 18px;
+			padding: 35px 15px 0px;
+		}
+
+		&__info {
+			margin-top: 20px;
+			
+			& .logo {
+				padding: @sp 0;
+				img {
+					width: 150px;
+				}
+			}
+		}
+
+		.registration-block {
+			padding: 15px 35px 20px;
+			
+			&__text {
+			    font-size: 16px;
+			    margin-bottom: @sp/3;
+			}
+
+			&__input,
+			&__btn {
+				margin-bottom: @sp/3;
+			}
+		}
+		
+	}
+}
+
+@media (max-width: 361px) {
+	.block-main {
+
+		&__text {
+			font-size: 17px;
+			padding: 35px 15px 0px;
+		}
+		&__info {
+			& .logo {
+				padding: @sp 0;
+				img {
+					width: 130px;
+				}
+			}
+		}	
+	}
+}
+
+@media (max-width: 321px) {
+	.block-main {
+		&__text {
+			font-size: 15px;
+		}
+
+		&__info {
+			margin-top: @sp;
+			
+			& .logo {
+				padding: @sp 0;
+				img {
+					width: 110px;
+				}
+			}
+		}
+
+		.registration-block {
+			padding: @sp 35px @sp;
+			
+			&__text {
+			    font-size: 15px;
+			    margin-bottom: @sp/3;
+			}
+
+			&__input,
+			&__btn {
+				font-size: 15px;
+				margin-bottom: @sp/3;
+			}
+
+			&__input{
+				&-block {
+					margin-bottom: 0px;
+				}
+			}
+		}
+		
+	}
+}

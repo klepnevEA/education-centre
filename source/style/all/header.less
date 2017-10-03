@@ -47,6 +47,11 @@
 
 			a {
 				color: @blue;
+				transition: 0.3s;
+				
+			    &:hover {
+					color: darken(@blue, 10%);
+				}
 			}
 
 			&_small {
@@ -136,6 +141,11 @@
 				color: #fff;
 				padding: @sp/3;
 				font-size: 20px;
+				transition: 0.3s;
+				
+			    &:hover {
+					background-color: darken(@blue, 10%);
+				}
 			}
 		}
 	}
@@ -171,6 +181,30 @@
 		float: right;
 		height: 77px;
 		width: 100%;
+		
+
+		&-menu {
+			position: absolute;
+			background-color: @blue;
+			top: 107px;
+			left: -200%;
+			padding: 85px 50px @sp*2;
+			transition:0.3s;
+			overflow-y: auto;
+			
+			&-elem-l1 {
+				margin-bottom: @sp*2;
+			}
+			
+			&-link {
+				display: inline-block;
+				color: #fff;
+				font-size: 32px;
+				margin-bottom: @sp/3;
+			}
+		}
+
+
 	}
 
 	&__list {
@@ -198,11 +232,19 @@
 			font-size: 25px;
 			line-height: 1;
 			transition: 0.3s;
+			
+			.mdi {
+				position: relative;
+				top: 3px;
+				font-size: 30px;
+				margin-right: 10px;
+				line-height: 0;
+			}
 		}
 
 		&:hover {
 			span {
-				color: #eee;
+				color: #ccc;
 			}
 			
 		}
@@ -216,7 +258,7 @@
 		transition: .3s;
 		
 		&:hover {
-			background-color: lighten(@purple, 10%);
+			background-color: darken(@purple, 5%);
 		}
 
 	}
@@ -228,7 +270,7 @@
 		transition: .3s;
 		
 		&:hover {
-			color: #eee;
+			color: #ccc;
 		}
 			
 		span {
@@ -254,11 +296,227 @@
 		top: 5px;
 		line-height: 0;
 	}
+
+	&-mobile {
+		display: none;
+		position: fixed;
+		z-index: 9000;
+		width: 100%;
+		padding: 15px 0;
+		top: 0;
+		background-color: @gray;
+		
+		& .header__dropdown {
+			top: 92px;
+		}
+		
+		&__btn {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			margin-top: 10px;
+			position: relative;
+			background-color: transparent;
+		}
+
+		&__img {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			height: 6px;
+			width: 50px;
+	        border-radius: 3px;
+	        background-color: #fff;
+	        transition: 0.3s;
+	        
+	        &:before,
+	        &:after {
+	        	content: '';
+	        	position: absolute;
+				top: -15px;
+				left: 0;
+				height: 6px;
+				width: 50px;
+		        border-radius: 3px;
+		        background-color: #fff;
+		        transition: 0.3s;
+	        }
+
+	        &:after {
+	        	top: 15px;
+	        }
+			
+		}
+
+		&.open-menu {
+			.header-mobile__img {
+
+				width: 0;
+
+				&:before {
+					transform: rotate(-45deg);
+					top: 0px;
+				}
+
+				&:after {
+					transform: rotate(45deg);
+					top: 0px;
+				}
+			}
+
+			.header__nav-menu {
+				left: 0;
+			}
+		}
+	}
 }
 
-// @media (max-width: 1515px) {
+@media (max-width: 1025px) {
+	.header{
+		&__link {
+			span {
+				font-size: 22px;
+			}
+		}
 
-// } 
+		&__container-bottom {
+			.header__link {
+				span {
+					font-size: 20px;
+				}
+			}
+		}
+	}	
+}
+
+@media (max-width: 991px) {
+	.header{
+		display: none;
+		
+		&-mobile {
+			display: block;
+		}
+	}
+} 
  
 
+@media (max-width: 668px) {
+	
+	.header {
 
+		&-mobile {
+			padding: 0;
+			
+
+			&.header-mobile {
+				.header__dropdown {
+					top: 77px;
+				}
+			}
+
+			&__btn {
+				width: 25px;
+				margin-top: 12px;
+			}
+
+			&__img {
+				width: 25px; 
+				height: 4px;
+				
+				&:before,
+				&:after { 
+					top: -10px;
+					width: 25px; 
+					height: 4px;
+				}
+
+				&:after {
+					top: 10px;
+				}
+			}
+		}
+
+		&__purple-btn {
+			font-size: 15px !important;
+			text-align: center;
+			padding: 5px 10px;
+		}
+			
+		&__phone {
+			font-size: 25px;
+			
+			span {
+				padding-top: 5px;
+				font-size: 13px;
+			}
+		}	
+
+
+		&__elem {
+			margin-right: @sp/3;
+			flex: 0 0 auto;
+		}
+
+		&__nav {
+			&-menu {
+				height: calc(~'100vh - 77px');
+				top: 77px;
+				padding: 25px 35px 30px;
+				width: 100vw;
+				
+				&-link {
+					font-size: 24px;
+				}
+			}
+		}
+	}
+
+
+}
+
+@media (max-width: 376px) {
+	
+	.header {
+		&__purple-btn {
+			font-size: 14px !important;
+		}
+
+		&__phone {
+			font-size: 15px;
+			
+			span {
+				display: inline-block;
+				font-size: 11px;
+				width: 110px;
+				text-align: center;
+				line-height: 1;
+							
+			}
+		}
+
+		&__nav-menu-link {
+			font-size: 21px;
+		}
+
+		&__dropdown {
+			left: -40px;
+		}		
+	}	
+}
+
+@media (max-width: 321px) {
+	.header {
+		&__nav-menu-link {
+			margin-bottom: 0;
+		}	
+
+		&__nav-menu-elem-l1 {
+			margin-bottom: @sp;
+		}
+
+		&__dropdown {
+			left: -48px;
+		}	
+	}	
+}
