@@ -1,0 +1,100 @@
+.news {
+	position: relative;
+	
+	&__wrap {
+		background-color: #FFF;
+		margin-top: @sp*3;
+		padding: @sp*2 @sp @sp;
+	}
+
+	&__title {
+		font-size: 30px;
+		margin: 0;
+		padding: 0;
+		margin-bottom: @sp*2;
+	}
+
+	&__img {
+		width: 100%;
+		height: 370px;
+		background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin-bottom: @sp;
+	}
+
+	&__text {
+		font-size: 20px;
+		color: #000;
+		margin-bottom: @sp;
+		text-align: justify;
+	}
+
+	&__buttons {
+		.clearfix;
+	}
+
+	&__btn {
+		position: relative;
+		min-width: 155px;
+		float: right;
+		display: inline-block;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 7px @sp;
+		color: #fff;
+        border-radius: 3px;
+        margin-left: 10px;
+        text-transform: uppercase;
+        
+        i {
+        	position: relative;
+        	top: 4px;
+        	font-size: 25px;
+        	line-height: 0;
+        }
+
+        span {
+        	padding-left: @sp/3;
+        	float: right;
+        }
+        
+        
+        &_faceboock {
+        	background-color: #4c68b3;
+        	transition: 0.3s;
+        	
+        	&:hover {
+        		background-color: darken(#4c68b3, 10%);
+        	}
+        }
+
+        &_vk {
+        	background-color: #426b9a;
+        	transition: 0.3s;
+        	
+        	&:hover {
+        		background-color: darken(#426b9a, 10%);
+        	}
+        }
+
+        &_twitter {
+        	background-color: #00abed;
+        	transition: 0.3s;
+        	
+        	&:hover {
+        		background-color: darken(#00abed, 10%);
+        	}
+        }
+	}
+}
+
+
+@media (max-width: 1200px) {
+}
+
+
+@media (max-width: 413px) {
+	
+}
+

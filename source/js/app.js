@@ -114,4 +114,38 @@ $(document).ready(function() {
 	/*маски для инпутов*/ 
 	$("#header__phone_number").mask("+7 (999) 999-99-99");
 	$("#header__phone_number-mobile").mask("+7 (999) 999-99-99");
+
+	/*воспроизведение видео*/
+
+	var videoOpen = function(e){
+		var thisEl = $(this),
+			thisData = thisEl.data('video');
+		$("#video-block").addClass('active');
+		$("#video-block__video source").attr('src', 'video/' + thisData + '.mp4');
+		$("#video-block__video").load();
+		$("#video-block__video").get(0).play();
+
+	};
+
+	var closeOpen = function(e){
+
+		$("#video-block").removeClass('active');
+		$("#video-block__video").get(0).pause();		
+	}
+
+
+	$(".lk__list-link").on("click touchstart", videoOpen);
+	$("#video-block__wrap-close").on("click touchstart", closeOpen);
+
+
+
+	/*страница демо личного кабинета. Дима, это наверное тебе решать когда выводить это окно.*/
+
+	$(".lk__list-elem-default").on("click touchstart", function() {
+		$(".popup").addClass('active');
+	});
+
+	$(".popup").on("click touchstart", function() {
+		$(".popup").removeClass('active');
+	});
 });

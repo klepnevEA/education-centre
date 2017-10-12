@@ -1,0 +1,55 @@
+section.form-registracion
+	.anchor#form-registracion
+	.container
+		.row
+			.col-md-12
+				.form-registracion__wrap
+					h2.form-registracion__title Здравствуйте, Иванов Илья!
+					.row
+						.col-md-7
+							.row
+								.col-md-6
+									input.form-registracion__input(type="text", placeholder="Ваше имя")
+								.col-md-6
+									input.form-registracion__input(type="text", placeholder="Ваша фамилия")
+							.row
+								.col-md-12
+									input.form-registracion__input(type="text", placeholder="Адрес электронной почты")
+						.col-md-5
+							.form-registracion__compliance
+								a(href="#").form-registracion__compliance-link Отправляя свои персональные данные, Вы соглашаетесь на их обработку
+					
+					.form-registracion__text Указанный адрес будет использован в качестве логина для входа в учебный кабинет.
+
+					.row
+						.col-md-6
+							.row
+								.col-md-5
+									.form-registracion__password Придумайте пароль
+								.col-md-7
+									input.form-registracion__input(type="password", placeholder="пароль123!")
+						.col-md-6
+
+					.form-registracion__text Пароль должен быть не короче 8 символов, возможно использование всех цифр, букв и знаков препинания.
+
+					.row
+						.col-md-6
+							.row
+							.row
+								.col-md-5
+									.form-registracion__password Повторите пароль
+								.col-md-7
+									input.form-registracion__input(type="password", placeholder="пароль123!")
+						.col-md-6
+					.row
+						.col-md-12
+							.form-registracion__buttons
+								a(href="#").form-registracion__btn Завершить регистрацию
+					.row
+						.col-md-12
+
+							input(type="checkbox").form-registracion__checkbox#form-registracion__checkbox
+							label(for="form-registracion__checkbox") Получать новости о новых программах и акциях
+
+					.form-registracion__text.form-registracion__text_gray Уже зарегистрированы? 
+						a(href="#") Войти

@@ -156,12 +156,14 @@
 	
 	&__container {
 		&-top {
-			background-color: @blue;
+			//background-color: @blue;
+			background-color: rgba(126, 206, 255, 0.95);
 			height: 77px;
 		}
 
 		&-bottom {
-			background-color: @gray;
+			//background-color: @gray;
+			background-color: rgba(102, 102, 102, 0.9);
 			height: 77px;
 			
 			.header__link {
@@ -185,10 +187,10 @@
 
 		&-menu {
 			position: absolute;
-			background-color: @blue;
+			background-color: rgba(126, 206, 255, 0.95);
 			top: 107px;
 			left: -200%;
-			padding: 85px 50px @sp*2;
+			padding: 30px 50px 0;
 			transition:0.3s;
 			overflow-y: auto;
 			
@@ -231,7 +233,7 @@
 			color: #fff;
 			font-size: 25px;
 			line-height: 1;
-			transition: 0.3s;
+			transition: 0.3s color;
 			
 			.mdi {
 				position: relative;
@@ -401,12 +403,13 @@
 } 
  
 
-@media (max-width: 668px) {
+@media (max-width: 415px) {
 	
 	.header {
 
 		&-mobile {
 			padding: 0;
+			background-color: rgba(102, 102, 102, 0.9);
 			
 
 			&.header-mobile {
@@ -444,11 +447,11 @@
 		}
 			
 		&__phone {
-			font-size: 25px;
+			font-size: 20px;
 			
 			span {
 				padding-top: 5px;
-				font-size: 13px;
+				font-size: 10.5px;
 			}
 		}	
 
@@ -460,13 +463,20 @@
 
 		&__nav {
 			&-menu {
-				height: calc(~'100vh - 77px');
+				height: auto;
 				top: 77px;
-				padding: 25px 35px 30px;
-				width: 100vw;
+				padding: 15px 15px 0px;
+				width: 70vw;
 				
 				&-link {
-					font-size: 24px;
+					font-size: 19px;
+				}
+
+				&-elem-l2 {
+					display: inline-block;
+					width: 100%;
+					margin-bottom: @sp/3;
+					line-height: 1;
 				}
 			}
 		}
@@ -496,7 +506,7 @@
 		}
 
 		&__nav-menu-link {
-			font-size: 21px;
+			font-size: 17px;
 		}
 
 		&__dropdown {
