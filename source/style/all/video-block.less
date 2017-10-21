@@ -1,7 +1,7 @@
 .video-block {
 	display: block;
 	position: fixed;
-	top: -1000px;
+	top: -2000px;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
@@ -107,23 +107,9 @@
 	}
 }
 
-// video::-internal-media-controls-download-button {
-//     display:none;
-// }
-
-// video::-webkit-media-controls-enclosure {
-//     overflow:hidden;
-// }
-
-// video::-webkit-media-controls-panel {
-//     width: calc(100% + 3px); /* Adjust as needed */
-// }
-
-
-@media (max-width: 1200px) {
-}
-
-
-@media (max-width: 413px) {
-	
+@media (max-width: 650px) {
+	.video-block__wrap {
+		width: 100%;
+		max-width: 100%;
+	}
 }

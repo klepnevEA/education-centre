@@ -40,7 +40,7 @@ header
 									.header__dropdown 
 										.header__dropdown-wrap
 											.header__dropdown-text Станьте сертифицированным<br> тренером<br><span>Стоимость сейчас <span class="header__dropdown-through">12000руб.</span></span> 10000 руб.!
-											a(href="#").header__dropdown-btn Купить со скидкой
+											input(type="button", value="Купить со скидкой").header__dropdown-btn
 								li.header__elem
 									a(href="#").header__link 
 										span 
@@ -54,12 +54,13 @@ header
 											.header__dropdown-checkbox-block
 												input(type="checkbox").header__dropdown-checkbox#header__dropdown-checkbox
 												label(for="header__dropdown-checkbox") Оставаться в системе
-											a(href="lk.html").header__dropdown-btn.header__dropdown-btn_blue Войти
+											input(type="button", value="Войти").header__dropdown-btn.header__dropdown-btn_blue
 											.header__dropdown-text.header__dropdown-text_mb.header__dropdown-text_small Ещё не зарегистрированы?<br>
+
 												a(href="#") Пройдите регистрацию
 										//- второй вариант дропдауна
 										//- .header__dropdown-wrap.header__dropdown-wrap_small
-										//- 	a(href="#").header__dropdown-btn.header__dropdown-btn_blue Войти
+										//- 	input(type="button", value="Войти").header__dropdown-btn.header__dropdown-btn_blue
 
 								li.header__elem
 									a(href="#").header__link 
@@ -68,13 +69,13 @@ header
 										.header__dropdown-wrap.header__dropdown-wrap_small
 											input.header__dropdown-input(type="text", placeholder="Ваше имя")
 											input.header__dropdown-input#header__phone_number(type="text", placeholder="+7 (      )       -    -    ")
-											a(href="#").header__dropdown-btn.header__dropdown-btn_blue Отправить
+											input(type="button", value="Отправить").header__dropdown-btn.header__dropdown-btn_blue
 											.header__dropdown-text.header__dropdown-text_mb.header__dropdown-text_small
 												a(href="#") Отправляя свои персональные данные, Вы соглашаетесь на их обработку
 
 								li.header__elem
 									.header__contacts
-										a(href="tel:+7 495 82 55555").header__phone 8 800 10 10 200<br>
+										a(href="tel:+8 800 10 10 200").header__phone 8 800 10 10 200<br>
 											span звонок по России бесплатный
 
 
@@ -96,13 +97,13 @@ header
 										.header__dropdown-wrap.header__dropdown-wrap_small
 											input.header__dropdown-input(type="text", placeholder="Ваше имя")
 											input.header__dropdown-input#header__phone_number-mobile(type="text", placeholder="+7 (      )       -    -    ")
-											a(href="#").header__dropdown-btn.header__dropdown-btn_blue Отправить
+											input(type="button", value="Отправить").header__dropdown-btn.header__dropdown-btn_blue
 											.header__dropdown-text.header__dropdown-text_mb.header__dropdown-text_small
 												a(href="#") Отправляя свои персональные данные, Вы соглашаетесь на их обработку
 
 								li.header__elem
 									.header__contacts
-										a(href="tel:+7 495 82 55555").header__phone 8 800 10 10 200<br>
+										a(href="tel:+8 800 10 10 200").header__phone 8 800 10 10 200<br>
 											span звонок по России бесплатный
 
 		.header__nav-menu

@@ -10,7 +10,8 @@
 *.swo
 *.swp
 *.vi
-*~
+*.svn
+*.mp4
 
 # OS or Editor folders
 *.sublime-grunt.cache

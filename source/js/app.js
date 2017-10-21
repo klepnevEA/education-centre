@@ -50,6 +50,36 @@ $(document).ready(function() {
 	});
 
 
+
+	$(".lk-slider-mobile").slick({
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				dots: true,
+				arrows: true,
+				autoplay: false,
+				autoplaySpeed: 5000,
+				responsive: [
+					{
+					breakpoint: 990,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2,
+							arrows: false,
+						}
+					},
+					{
+					breakpoint: 650,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							arrows: false,
+						}
+					}
+					
+				]
+	});	
+
+
 	/*кнопка верхнего меню*/
 	$(window).resize(function(){
 		if($( window ).width() > 990 ) {
@@ -118,8 +148,10 @@ $(document).ready(function() {
 	/*воспроизведение видео*/
 
 	var videoOpen = function(e){
+		e.preventDefault();
 		var thisEl = $(this),
 			thisData = thisEl.data('video');
+			console.log(thisData);
 		$("#video-block").addClass('active');
 		$("#video-block__video source").attr('src', 'video/' + thisData + '.mp4');
 		$("#video-block__video").load();
@@ -134,18 +166,20 @@ $(document).ready(function() {
 	}
 
 
-	$(".lk__list-link").on("click touchstart", videoOpen);
+	$(".lk__list-link a").on("click touchstart", videoOpen);
 	$("#video-block__wrap-close").on("click touchstart", closeOpen);
 
 
 
 	/*страница демо личного кабинета. Дима, это наверное тебе решать когда выводить это окно.*/
 
-	$(".lk__list-elem-default").on("click touchstart", function() {
-		$(".popup").addClass('active');
-	});
+	// $(".lk__list-elem-default").on("click", function() {
+	// 	$(".popup").addClass('active');
+	// });
 
-	$(".popup").on("click touchstart", function() {
-		$(".popup").removeClass('active');
-	});
+	// $(".popup").on("click", function() {
+	// 	$(".popup").removeClass('active');
+	// });
+
+
 });
