@@ -88,8 +88,23 @@
 					padding-top: 60px;
 					color: @gray;
 				}
+			}
 
-
+			&_viewed {
+				&:after {
+					content: 'Просмотренно';
+					display: inline-block;
+					position: absolute;
+					top: 25px;
+					right: 25px;
+					background-color: rgba(255,255,255,0.5);
+					z-index: 1000;
+					font-size: 15px;
+					padding: 5px;
+					text-align: center;
+					color: #fff;
+					background-color: @blue;
+				}
 			}
 		}
 
@@ -170,6 +185,25 @@
 				transform: translate(-50%, 0);
 			    &:hover {
 					background-color: darken(@blue, 10%);
+				}
+
+				&_passed {
+					background-color: #006668;
+					color: #fff;
+					
+				    &:hover {
+						background-color: lighten(#006668, 5%);
+					}
+				}
+
+				&_disabled {
+					background-color: #C7D8DF;
+					color: #000;
+					cursor: default;
+					padding: 20px 0;
+				    &:hover {
+						background-color: #C7D8DF;
+					}
 				}
 			}
 		}

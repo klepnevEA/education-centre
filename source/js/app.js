@@ -144,6 +144,7 @@ $(document).ready(function() {
 	/*маски для инпутов*/ 
 	$("#header__phone_number").mask("+7 (999) 999-99-99");
 	$("#header__phone_number-mobile").mask("+7 (999) 999-99-99");
+	$("#form-registracion__input-telefon").mask("+7 (999) 999-99-99");
 
 	/*воспроизведение видео*/
 
@@ -181,5 +182,22 @@ $(document).ready(function() {
 	// 	$(".popup").removeClass('active');
 	// });
 
+	/*Дима, это наверное тебе решать когда выводить это окно.*/
+	$(".form-registracion__btn").on("click", function() {
+		$(".popup").addClass('active');
+	});
+
+	$(".popup").on("click", function() {
+		$(".popup").removeClass('active');
+	});
+
+	/*Дима, это наверное тебе решать когда выводить это окно.*/
+	$(".lk__list-elem-default").on("click", function() {
+		$(".popup").addClass('active');
+	});
+
+	$(".popup").on("click", function() {
+		$(".popup").removeClass('active');
+	});
 
 });

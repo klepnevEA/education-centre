@@ -34,7 +34,39 @@ section.form-registracion
 							.form-registracion__buttons
 								input(type="button", value="Вход").form-registracion__btn
 							
-					.form-registracion__text 2. Ознакомьтесь с условиями покупки
+					.form-registracion__text 2. Уточните свои персональные данные, для их корректного отображения в Вашем сертификате и в базе для потенциальных работодателей
+
+					.row
+						.col-md-4
+							input.form-registracion__input(type="text", placeholder="Ваша фамилия")
+						.col-md-4
+							input.form-registracion__input(type="text", placeholder="Ваше имя")
+						.col-md-4
+							input.form-registracion__input(type="text", placeholder="Ваше отчество")
+
+					.row
+						.col-md-6
+							.row
+								.col-md-5
+									.form-registracion__password Контактный телефон
+								.col-md-7
+									input.form-registracion__input#form-registracion__input-telefon(type="text", placeholder="+7 (___) ___-__-__")
+						.col-md-6
+
+					.row
+						.col-md-12
+							a.form-registracion__compliance-link(href="#") Отправляя свои персональные данные, Вы соглашаетесь на их обработку
+					br
+					br
+
+
+					.row
+						.col-md-1
+						.col-md-11
+							.form-registracion__buttons
+								input(type="button", value="Подтвердить").form-registracion__btn
+
+					.form-registracion__text 3. Ознакомьтесь с условиями покупки
 
 					.row
 						.col-md-1
@@ -43,15 +75,17 @@ section.form-registracion
 						.col-md-1
 
 					.row
-						.col-md-12
-							.form-registracion__buttons.form-registracion__buttons_center
+						.col-md-1
+						.col-md-11
+							.form-registracion__buttons
 								input(type="button", value="Принять и продолжить").form-registracion__btn
 
-					.form-registracion__text 3. Перейдите к оплате
+					.form-registracion__text 4. Перейдите к оплате
 
 					.row
-						.col-md-12
-							.form-registracion__buttons.form-registracion__buttons_center
+						.col-md-1
+						.col-md-11
+							.form-registracion__buttons
 								input(type="button", value="Подтвердить").form-registracion__btn
 
 
