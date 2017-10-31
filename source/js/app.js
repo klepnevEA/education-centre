@@ -5,12 +5,65 @@ $(document).ready(function() {
 	/*запускаем wowjs*/
 	new WOW().init();
 
+
+	/*зскролл до нужного эллемента при переходе с другой страници*/
+	$('html, body').stop().animate({
+	    scrollTop: $('#home').offset().top
+	}, 777);
+
+	var anchorScroll = localStorage.getItem('anchor');
+	console.log(anchorScroll);
+
+	if(anchorScroll) {
+		   var anchor = anchorScroll;
+		   var scrollTo = function() {
+
+		   		if($("div").is("#" + anchor)) {
+			        $('html, body').stop().animate({
+			            scrollTop: $("#" + anchor).offset().top
+			        }, 777);
+			        $('.header').addClass('hidden');
+			        localStorage.removeItem("anchor");
+			        anchorScroll = null;
+		   		}
+		   };
+
+		   scrollTo();
+	};
+
+	var sctollToEllement = function(e) {
+
+		var $this = $(this),
+			thisData = $this.data('scroll');
+
+			if(thisData) {
+				localStorage.setItem("anchor", thisData);
+			} else {
+				localStorage.removeItem("anchor");
+			}
+	}
+
+	$('.sctoll-to-ellement').on('click', sctollToEllement);
+
+
+
 	//слайдер
 	$(".slider-main__wrap").slick({
 		dots: false,
 		arrows: true
 	});
 	
+
+	//слайдер главный
+	$(".block-main__list").slick({
+		dots: false,
+		arrows: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 1000,
+	});
+
 
 	//слайдер
 	$(".slider-our-teachers").slick({
@@ -135,7 +188,7 @@ $(document).ready(function() {
 		$('.header__dropdown').removeClass('active');
     	that.find('.header__dropdown').addClass('active');
     	e.stopPropagation();
-    })
+    });
 
     $('body').on('click', function() {
     	$('.header__dropdown').removeClass('active');
@@ -145,6 +198,9 @@ $(document).ready(function() {
 	$("#header__phone_number").mask("+7 (999) 999-99-99");
 	$("#header__phone_number-mobile").mask("+7 (999) 999-99-99");
 	$("#form-registracion__input-telefon").mask("+7 (999) 999-99-99");
+	$("#lk__input_phone").mask("+7 (999) 999-99-99");
+
+
 
 	/*воспроизведение видео*/
 
@@ -161,7 +217,7 @@ $(document).ready(function() {
 	};
 
 	var closeOpen = function(e){
-
+		e.preventDefault();
 		$("#video-block").removeClass('active');
 		$("#video-block__video").get(0).pause();		
 	}
@@ -198,6 +254,13 @@ $(document).ready(function() {
 
 	$(".popup").on("click", function() {
 		$(".popup").removeClass('active');
+	});
+
+	// переключение качества видео
+	$('.video-block__quality-link').on('click', function(e) {
+		e.preventDefault();
+		$('.video-block__quality-link').removeClass('active');
+		$(this).addClass('active')
 	});
 
 });

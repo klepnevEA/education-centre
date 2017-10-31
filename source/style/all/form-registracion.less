@@ -26,6 +26,10 @@
 		:-moz-placeholder { /* Firefox 18- */
 		  color: #ccc;
 		}
+
+		&_center {
+			text-align: center;
+		}
 	}
 
 	&__title {
@@ -84,6 +88,22 @@
 			&:hover {
 				background-color: darken(@purple, 10%);
 			}
+		}
+
+		&_red {
+			background-color: #990000;
+			color: #fff;
+			padding: @sp;
+			
+			&:hover {
+				background-color: darken(#990000, 10%);
+			}
+		}
+
+		&_lk {
+			width: 100%;
+			padding: 7px;
+			height: 37px;
 		}
 		
 	}
