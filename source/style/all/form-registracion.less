@@ -11,9 +11,9 @@
 		width: 100%;
 		border:2px solid @purple;
 		margin-bottom: 20px;
-		font-size: 20px;
+		font-size: 16px;
 		color: #000;
-		padding: 5px;		
+		padding: 8px;		
 		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 		  color: #ccc;
 		}
@@ -33,7 +33,7 @@
 	}
 
 	&__title {
-		font-size: 30px;
+		font-size: 23px;
 		margin: 0;
 		padding: 0;
 		color: @purple;
@@ -43,7 +43,7 @@
 			font-weight: normal;
 			text-align: center;
 			color: @purple;
-			font-size: 24px;
+			font-size: 23px;
 			margin-bottom: 75px;
 			
 			span {
@@ -71,7 +71,7 @@
 		padding: @sp/5 10px;
 		margin-bottom: @sp;
 		color: @purple;
-		font-size: 20px;
+		font-size: 16px;
 		margin-bottom: 25px;
 		min-width: 200px;
 		text-align: center;
@@ -109,13 +109,14 @@
 	}
 
 	&__text {
-		font-size: 20px;
+		font-size: 16px;
 		color: @purple;
 		margin-bottom: 25px;
+		line-height: 1.5;
 		
 		&_gray  {
 			color: @gray;
-			font-size: 20px;
+			font-size: 16px;
 			font-weight: normal;
 			
 			a {
@@ -128,20 +129,20 @@
 		}
 
 		&_blue {
-			font-size: 25px;
+			font-size: 18px;
 			color: @purple;
 			margin-bottom: @sp*2;
 		}
 
 		&_italic {
 			font-style: italic;
-			font-size: 25px;
+			font-size: 18px;
 			color: @gray;
 			margin-bottom: @sp*4;
 			line-height: 1.2;
 			
 			&-small {
-				font-size: 20px;
+				font-size: 16px;
 				font-style: italic;
 				margin-bottom: @sp;
 				color: @gray-light;
@@ -173,14 +174,14 @@
 		&__checkbox {
 			vertical-align: top;
 			margin: 0 3px 0 0;
-			width: 30px;
-			height: 30px;	
+			width: 25px;
+			height: 25px;	
 			color: #fff;
 		  
 			&  + label {
 				cursor: pointer;
 				color: @gray;
-				font-size: 20px;
+				font-size: 16px;
 				margin-bottom: 30px;
 				font-weight: normal;
 			}
@@ -200,13 +201,14 @@
 				position: absolute;
 				top: -4px;
 				left: 0;
-				width: 30px;
-				height: 30px;
+				width: 25px;
+				height: 25px;
 				background: #FFF;
 				border:1px solid @purple;
 			}
 
 			&:checked + label:before {
+		        background-size: 25px;
 				background-image: url('../img/checkbox.jpg');
 			}
 		}
@@ -242,7 +244,7 @@
 			border: 2px solid @gray-light;
 			color: @gray;
 			width: 200px;
-			font-size: 24px;
+			font-size: 16px;
 			text-align: center;
 		}
 	}
@@ -258,14 +260,14 @@
 		&-checkbox {
 			vertical-align: top;
 			margin: 0 3px 0 0;
-			width: 30px;
-			height: 30px;	
+			width: 25px;
+			height: 25px;	
 			color: #fff;
 		  
 			&  + label {
 				cursor: pointer;
 				color: #ccc;
-				font-size: 20px;
+				font-size: 16px;
 				font-weight: normal;
 				margin-bottom: @sp;
 			}
@@ -285,14 +287,14 @@
 				position: absolute;
 				top: -4px;
 				left: 0;
-				width: 30px;
-				height: 30px;
+				width: 25px;
+				height: 25px;
 				background: #FFF;
 				border: 2px solid @gray;
 			}
 
 			&:checked + label:before {
-				font-size: cover;
+		        background-size: 25px;
 				background-image: url('../img/checkbox.jpg');
 			}
 		}
@@ -307,8 +309,9 @@
 		
 		li {
 			display: inline-block;
-			font-size: 24px;
+			font-size: 16px;
 			color: @gray-light;
+			line-height: 1.5;
 			margin: 0 2px;
 			
 			&.active {
