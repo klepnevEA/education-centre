@@ -195,10 +195,13 @@ $(document).ready(function() {
     }) 
 
 	/*маски для инпутов*/ 
-	$("#header__phone_number").mask("+7 (999) 999-99-99");
-	$("#header__phone_number-mobile").mask("+7 (999) 999-99-99");
-	$("#form-registracion__input-telefon").mask("+7 (999) 999-99-99");
-	$("#lk__input_phone").mask("+7 (999) 999-99-99");
+	if (screen.width >= '1025') {
+		$("#header__phone_number").mask("+7 (999) 999-99-99");
+		$("#header__phone_number-mobile").mask("+7 (999) 999-99-99");
+		$("#form-registracion__input-telefon").mask("+7 (999) 999-99-99");
+		$("#lk__input_phone").mask("+7 (999) 999-99-99");
+	}
+
 
 
 
