@@ -12,7 +12,6 @@ $(document).ready(function() {
 	}, 777);
 
 	var anchorScroll = localStorage.getItem('anchor');
-	console.log(anchorScroll);
 
 	if(anchorScroll) {
 		   var anchor = anchorScroll;
@@ -177,6 +176,7 @@ $(document).ready(function() {
 	        	$('.header').addClass('hidden');
 	        }
 	        e.preventDefault();
+	        $('.header-mobile').removeClass('open-menu');
 	        return false;
 	    });
 	});
@@ -262,5 +262,6 @@ $(document).ready(function() {
 		$('.video-block__quality-link').removeClass('active');
 		$(this).addClass('active')
 	});
+
 
 });

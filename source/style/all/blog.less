@@ -23,6 +23,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		margin: -20px;
+		.clearfix;
 		
 		&-wrap {
 			margin-bottom: @sp*2;
@@ -110,7 +111,27 @@
 @media (max-width: 1200px) {
 }
 
+@media (max-width: 768px) {
+	.blog {
+		&__list {
+			&-elem {
+				width: 50%;
+			}
+		}
+	}
+}
 
-@media (max-width: 413px) {
-	
+
+@media (max-width: 375px) {
+	.blog {
+		&__list {
+			&-elem {
+				width: 100%;
+			}
+		}
+
+		&__wrap {
+			margin-top: 0;
+		}
+	}
 }
