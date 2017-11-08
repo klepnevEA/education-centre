@@ -265,6 +265,20 @@ $(document).ready(function() {
 		$('.video-block__quality-link').removeClass('active');
 		$(this).addClass('active')
 	});
+	
+	var placeholderVal;
+	$('.registration-block__input, .header__dropdown-input').on('focus', function () {
+		placeholderVal = $(this).attr('placeholder')
+		if($(this).val() == '') {
+			$(this).attr('placeholder','');
+		} else {
+			$(this).attr('placeholder',placeholderVal);
+		}
+	});
 
-
+	$('.registration-block__input, .header__dropdown-input').on('blur', function () {
+		if($(this).val() == '') {
+			$(this).attr('placeholder',placeholderVal);
+		}
+	});
 });
