@@ -1,0 +1,31 @@
+.questions
+	.questions__wrap
+		.questions__select.active
+			select.select
+				option Общие вопросы
+				option Анатомия
+				option Тренировочный процесс
+				option Питание. Основы диетологии
+				option Специфика тренировок  для различных задач
+				option Первая медицинская помощь
+				option Физиология
+				option Технология продаж
+				option Тренировочные процесс
+		.questions__form
+			a.questions__close(href="#")
+				i.mdi.mdi-close
+			form(action="")
+				.questions__form-text Вам ответит преподаватель <span>Яковлев Семен</span>
+				.questions__form-photo(style="background-image: url(img/photo.png)")
+				.questions__form-block
+					textarea.questions__form-textarea(name="textarea", placeholder="Ваш вопрос")
+					input(type="button", value="Отправить").questions__form-btn
+
+		.questions__ansver Спасибо за Ваш вопрос!<br> Ответ придет на адрес почты, указанной при регистрации.
+			a.questions__close(href="#")
+				i.mdi.mdi-close
+
+
+
+
+

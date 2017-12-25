@@ -1,0 +1,43 @@
+.select {
+	color: #cccccc;
+	font-size: 20px;
+	
+	&__gap {
+		padding: 3px;
+		position: relative;
+		cursor: pointer;
+		
+		&:after {
+			content: "\f35d";
+			font-family: "Material Design Icons";
+			position: absolute;
+			top: 15px;
+			right: 5px;
+			font-size: 40px;
+			color: @blue;
+			transition: 0.5s;
+			line-height: 0;
+		}
+
+		&.on {
+			&:after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__list {
+		border-top: 1px solid #cccccc;
+		max-height: 210px;
+		overflow-y: auto; 
+	}
+
+	&__item {
+		padding-left: 20px;
+		cursor: pointer;
+		
+		&:hover {
+			color: #000;
+		}
+	}
+}
